@@ -1,1 +1,1 @@
-A readme for system engineering devops
+Shell permissions scripts
