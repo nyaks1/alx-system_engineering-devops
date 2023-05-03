@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays the PID and process name of processes whose name contains the word "bash"
+# Disable shellcheck SC2006 warning for grep command
+
+# Use pgrep to get the PIDs of all processes whose name contains the word "bash"
+pids=$(pgrep -f bash)
+
+# Loop through the PIDs and print the PID and process name
+for pid in $pids; do
+    echo "$pid $(ps -p $pid -o comm=)"
+done
